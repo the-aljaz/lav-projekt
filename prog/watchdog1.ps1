@@ -1,5 +1,6 @@
 Set-Location -Path "$HOME\ProcessManagementUtility\"
 ./getPID.bat > wd1pid.txt
+Start-Sleep -Seconds 5
 while ($true) {
     #! WATCHDOG0
     $wd0pid = Get-Content wd0pid.txt
