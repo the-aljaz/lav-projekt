@@ -1,4 +1,4 @@
-Set-Location -Path "C:\Program Files\ProcessManagementUtility"
+Set-Location -Path "$HOME\ProcessManagementUtility\"
 ./getPID.bat > spid
 while($true)
 {
