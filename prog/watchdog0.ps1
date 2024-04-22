@@ -1,4 +1,4 @@
-cd "C:\Program Files\ProcessManagementUtility"
+Set-Location -Path "C:\Program Files\ProcessManagementUtility"
 ./getPID.bat > wd0pid   #da svoj pid u file
 while ($true) {
     #! WATCHDOG1
