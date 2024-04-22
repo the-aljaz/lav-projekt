@@ -1,5 +1,5 @@
 Set-Location -Path "$HOME\ProcessManagementUtility\"
-./getPID.bat > spid
+./getPID.bat > spid.txt
 while($true)
 {
 [console]::beep(587,750)
