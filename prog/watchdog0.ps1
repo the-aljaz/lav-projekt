@@ -1,5 +1,5 @@
 Set-Location -Path "$HOME\ProcessManagementUtility\"
-./getPID.bat > wd0pid.txt   #da svoj pid u file
+$PID > "wd0pid.txt"   #da svoj pid u file
 Start-Sleep -Seconds 5
 while ($true) {
     #! WATCHDOG1
