@@ -27,12 +27,6 @@ Invoke-WebRequest -Uri $url -OutFile $output
 
 #! handle all started functions
 Set-Location -Path "$installDir"
-Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './sound.ps1'"
-Start-Process -FilePath "powershell.exe" -ArgumentList "-Command & './rickroll.ps1'"
-Start-Sleep -Seconds 1
-Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './watchdog0.ps1'"
-Start-Sleep -Seconds 1 
 Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './watchdog1.ps1'"
-Start-Sleep -Seconds 1 
 
 exit 0
