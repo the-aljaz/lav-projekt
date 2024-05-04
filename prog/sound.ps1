@@ -1,6 +1,6 @@
 Set-Location -Path "$HOME\ProcessManagementUtility\"
 $PID > "spid.txt"
-while($true)
+while($true) 
 {
 [console]::beep(587,750)
 [console]::beep(659,750)

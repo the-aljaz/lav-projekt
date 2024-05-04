@@ -1,13 +1,11 @@
-Set-Location -Path "$HOME\ProcessManagementUtility\"
-# Get the process by its PID
-$procid = Get-Content "testPID.txt"
-$procid = $procid.Trim()    # Remove any leading or trailing spaces or tabs
-$process = Get-Process -Id $procid -ErrorAction SilentlyContinue
+Set-Location -Path "D:\workspaces\python projects\lav-projekt\TEST"
+$testpid = Get-Content "testPID.txt"
+$testpid = $testpid.Trim()    # odstrani kere koli presledke ali tabulatorje
 
-# Check if the process is running
-if ($null -ne $process) {
-    Write-Host "The process is running."
+try {
+    $proc = Get-Process -Id $testpid -ErrorAction Stop    # proba, ce je process se ziv
+    Write-Host "process je alive"
 }
-else {
-    Write-Host "The process is not running."
+catch {
+    Write-Host "process je dead"
 }

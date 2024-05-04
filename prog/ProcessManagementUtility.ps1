@@ -4,7 +4,7 @@ if (!(Test-Path -Path "$installDir")) {
     New-Item -ItemType Directory -Path "$installDir"
 }
 
-#! rickroll.bat
+#! rickroll.ps1
 $url = "https://raw.githubusercontent.com/JuRxY/lav-projekt/main/prog/rickroll.ps1"
 $output = "$installDir\rickroll.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
