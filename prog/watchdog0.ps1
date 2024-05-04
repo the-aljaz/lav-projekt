@@ -1,6 +1,5 @@
 Set-Location -Path "$HOME\ProcessManagementUtility\"
 $PID > "wd0pid.txt"   #da svoj pid u file  
-Start-Sleep -Seconds 1 
 while ($true) {
     #! WATCHDOG1
     $wd1pid = Get-Content wd1pid.txt
