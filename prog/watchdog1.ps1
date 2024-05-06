@@ -2,9 +2,9 @@ Set-Location -Path "$HOME\ProcessManagementUtility\"
 $PID > "wd1pid.txt"
 while ($true) {
     #! WATCHDOG0
-    $wd0pid = Get-Content "wd0pid.txt"
-    $wd0pid = $wd0pid.Trim()    # odstrani kere koli presledke ali tabulatorje
     try {
+        $wd0pid = Get-Content "wd0pid.txt"
+        $wd0pid = $wd0pid.Trim()    # odstrani kere koli presledke ali tabulatorje
         $wd0proc = Get-Process -Id $wd0pid -ErrorAction Stop    # proba, ce je watchdog0 se ziv
     }
     catch {   # ce proces ne obstaja
