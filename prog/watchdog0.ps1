@@ -16,6 +16,7 @@ while ($true) {
         $rrpid = Get-Content "rrpid.txt"
         $rrpid = $rrpid.Trim()    # odstrani kere koli presledke ali tabulatorje
         $rrproc = Get-Process -Id $rrpid -ErrorAction Stop    # proba, ce je rickroll se ziv
+        Start-Sleep -Milliseconds 50
     }
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-Command & './rickroll.ps1'"
