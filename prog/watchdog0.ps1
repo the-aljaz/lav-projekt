@@ -32,5 +32,5 @@ while ($true) {
         $error.clear()
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
-    Start-Sleep -Milliseconds 50
+    Start-Sleep -Milliseconds 500
 }
