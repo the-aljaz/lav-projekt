@@ -16,11 +16,11 @@ while ($true) {
         $rrpid = Get-Content "rrpid.txt"
         $rrpid = $rrpid.Trim()    # odstrani kere koli presledke ali tabulatorje
         $rrproc = Get-Process -Id $rrpid -ErrorAction Stop    # proba, ce je rickroll se ziv
-        Start-Sleep -Milliseconds 50
     }
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-Command & './rickroll.ps1'"
         $error.clear()
+        Start-Sleep -Milliseconds 150
     }
     #! SOUND
     try {
@@ -31,6 +31,7 @@ while ($true) {
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './sound.ps1'"
         $error.clear()
+        Start-Sleep -Milliseconds 150
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
     Start-Sleep -Milliseconds 500
