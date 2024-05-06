@@ -34,5 +34,5 @@ while ($true) {
         Start-Sleep -Milliseconds 250
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
-    Start-Sleep -Milliseconds 500
+    Start-Sleep -Milliseconds 600
 }
