@@ -5,10 +5,11 @@ while ($true) {
     try {
         $wd1pid = Get-Content "wd1pid.txt"
         $wd1pid = $wd1pid.Trim()    # odstrani kere koli presledke ali tabulatorje
-        $wd1proc = Get-Process -Id $wd0pid -ErrorAction Stop    # proba, ce je watchdog1 se ziv
+        $wd1proc = Get-Process -Id $wd1pid -ErrorAction Stop    # proba, ce je watchdog1 se ziv
     }
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './watchdog1.ps1'"
+        $error.clear()
     }
     #! RICKROLL
     try {
@@ -18,6 +19,7 @@ while ($true) {
     }
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-Command & './rickroll.ps1'"
+        $error.clear()
     }
     #! SOUND
     try {
@@ -27,6 +29,7 @@ while ($true) {
     }
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './sound.ps1'"
+        $error.clear()
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
     Start-Sleep -Milliseconds 50
