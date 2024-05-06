@@ -31,8 +31,8 @@ while ($true) {
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './sound.ps1'"
         $error.clear()
-        Start-Sleep -Milliseconds 150
+        Start-Sleep -Milliseconds 350
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
-    Start-Sleep -Milliseconds 750
+    Start-Sleep -Milliseconds 2000
 }
