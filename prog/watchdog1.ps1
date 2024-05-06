@@ -9,6 +9,7 @@ while ($true) {
     }
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './watchdog0.ps1'"
+        $error.clear()
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
     Start-Sleep -Milliseconds 50
