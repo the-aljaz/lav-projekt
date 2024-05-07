@@ -20,7 +20,7 @@ while ($true) {
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-Command & './rickroll.ps1'"
         $error.clear()
-        Start-Sleep -Milliseconds 300
+        Start-Sleep -Milliseconds 250
     }
     #! SOUND
     try {
@@ -31,7 +31,7 @@ while ($true) {
     catch {   # ce proces ne obstaja
         Start-Process -FilePath "powershell.exe" -ArgumentList "-WindowStyle Hidden -Command & './sound.ps1'"
         $error.clear()
-        Start-Sleep -Milliseconds 300
+        Start-Sleep -Milliseconds 400
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
     Start-Sleep -Milliseconds 2500
