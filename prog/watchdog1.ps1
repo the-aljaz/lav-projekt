@@ -13,3 +13,4 @@ while ($true) {
     }
     #! DELAY DA NI PREVEC ZA PROCESOR
     Start-Sleep -Milliseconds 500
+}
